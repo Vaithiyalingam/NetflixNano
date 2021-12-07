@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.vaithidroid.appone.netflixnano.ui.fragment.MoviesFragment"
+        android:label="MoviesFragment" />
+    <fragment
+        android:id="@+id/tvFragment"
+        android:name="com.vaithidroid.appone.netflixnano.ui.fragment.TvFragment"
+        android:label="TvFragment" />
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.vaithidroid.appone.netflixnano.ui.fragment.WatchlistFragment"
+        android:label="WatchlistFragment" />
+</navigation>
