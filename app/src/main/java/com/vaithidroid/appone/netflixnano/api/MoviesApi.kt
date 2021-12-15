@@ -10,34 +10,34 @@ interface MoviesApi {
 
     @GET("3/movie/now_playing")
     suspend fun getNowPlayingMovies(
-        @Query("api_key")
-        apiKey: String = API_KEY,
         @Query("page")
-        pageNumber: Int = 1
+        pageNumber: Int = 1,
+        @Query("api_key")
+    apiKey: String = API_KEY
     ) : Response<MoviesResponse>
 
     @GET("3/movie/popular")
     suspend fun getPopularMovies(
-        @Query("api_key")
-        apiKey: String = API_KEY,
         @Query("page")
-        pageNumber: Int = 1
+        pageNumber: Int = 1,
+        @Query("api_key")
+        apiKey: String = API_KEY
     ) : Response<MoviesResponse>
 
     @GET("3/movie/top_rated")
     suspend fun getTopRatedMovies(
-        @Query("api_key")
-        apiKey: String = API_KEY,
         @Query("page")
-        pageNumber: Int = 1
+        pageNumber: Int = 1,
+        @Query("api_key")
+        apiKey: String = API_KEY
     ) : Response<MoviesResponse>
 
     @GET("3/movie/upcoming")
     suspend fun getUpcomingMovies(
-        @Query("api_key")
-        apiKey: String = API_KEY,
         @Query("page")
-        pageNumber: Int = 1
+        pageNumber: Int = 1,
+        @Query("api_key")
+        apiKey: String = API_KEY
     ) : Response<MoviesResponse>
 
 }

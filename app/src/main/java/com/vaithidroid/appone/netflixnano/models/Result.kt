@@ -1,9 +1,17 @@
 package com.vaithidroid.appone.netflixnano.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(
+    tableName = "results"
+)
 data class Result(
     val adult: Boolean,
     val backdrop_path: String,
-    val genre_ids: List<Int>,
+//    val genre_ids: List<Int>,
+    @PrimaryKey(autoGenerate = false)
     val id: Int,
     val original_language: String,
     val original_title: String,

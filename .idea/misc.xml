@@ -4,9 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/activity_main.xml" value="0.22146739130434784" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fragment_movies.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fgffg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fragment_article.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fragment_movies.xml" value="0.2" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fragment_tv.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/fragment_watchlist.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/item_movies.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/item_movies_now_playing.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/item_movies_popular.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/item_movies_top_rated.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/top_rated_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/layout/upcoming_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/NetflixNano/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
