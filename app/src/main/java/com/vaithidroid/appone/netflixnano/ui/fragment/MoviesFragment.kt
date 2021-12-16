@@ -12,7 +12,6 @@ import com.vaithidroid.appone.netflixnano.ui.MainActivity
 import com.vaithidroid.appone.netflixnano.ui.viewmodel.MoviesViewModel
 import com.vaithidroid.appone.netflixnano.util.Resource
 import kotlinx.android.synthetic.main.fragment_movies.*
-import androidx.recyclerview.widget.RecyclerView
 import com.vaithidroid.appone.netflixnano.adapter.PopularMoviesAdapter
 import com.vaithidroid.appone.netflixnano.adapter.TopRatedAdapter
 import com.vaithidroid.appone.netflixnano.adapter.UpcomingAdapter
@@ -36,14 +35,22 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         viewModel.nowPlayingMovies.observe(viewLifecycleOwner, Observer { response ->
             when(response){
                 is Resource.Success -> {
+                    shimmerLayout.visibility = View.GONE
+                    rv_now_playing_movies.visibility = View.VISIBLE
                     response.data?.let { moviesResponse ->
                         moviesAdapter.differ.submitList(moviesResponse.results)
                     }
                 }
                 is Resource.Error -> {
+                    shimmerLayout.visibility = View.GONE
                     response.message?.let { message ->
                         Log.e(TAG, "An error occured $message")
                     }
+                }
+                is Resource.Loading ->{
+                    rv_now_playing_movies.visibility = View.GONE
+                  shimmerLayout.startShimmer()
+
                 }
             }
         })
@@ -51,14 +58,21 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         viewModel.popularMovies.observe(viewLifecycleOwner, Observer { response ->
             when(response){
                 is Resource.Success -> {
+                    shimmerLayoutPopularMoview.visibility = View.GONE
+                    rv_popular_movies.visibility = View.VISIBLE
                     response.data?.let { moviesResponse ->
                         popularMoviesAdapter.differ.submitList(moviesResponse.results)
                     }
                 }
                 is Resource.Error -> {
+                    shimmerLayoutPopularMoview.visibility = View.GONE
                     response.message?.let { message ->
                         Log.e(TAG, "An error occured $message")
                     }
+                }
+                is Resource.Loading ->{
+                    rv_popular_movies.visibility = View.GONE
+                    shimmerLayoutPopularMoview.startShimmer()
                 }
             }
         })
@@ -66,14 +80,22 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         viewModel.topRatedMovies.observe(viewLifecycleOwner, Observer { response ->
             when(response){
                 is Resource.Success -> {
+                    shimmerLayoutTopRated.visibility = View.GONE
+                    rv_top_rated.visibility = View.VISIBLE
                     response.data?.let { moviesResponse ->
                         topRatedAdapter.differ.submitList(moviesResponse.results)
                     }
                 }
                 is Resource.Error -> {
+                    shimmerLayoutTopRated.visibility = View.GONE
                     response.message?.let { message ->
                         Log.e(TAG, "An error occured $message")
                     }
+                }
+                is Resource.Loading ->{
+                    rv_top_rated.visibility = View.GONE
+                    shimmerLayoutTopRated.startShimmer()
+
                 }
             }
         })
@@ -81,14 +103,22 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
         viewModel.upcomingMovies.observe(viewLifecycleOwner, Observer { response ->
             when(response){
                 is Resource.Success -> {
+                    shimmerLayoutUpcoming.visibility = View.GONE
+                    rv_upcoming.visibility = View.VISIBLE
                     response.data?.let { moviesResponse ->
                         upcomingAdapter.differ.submitList(moviesResponse.results)
                     }
                 }
                 is Resource.Error -> {
+                    shimmerLayoutUpcoming.visibility = View.GONE
                     response.message?.let { message ->
                         Log.e(TAG, "An error occured $message")
                     }
+                }
+                is Resource.Loading ->{
+                    rv_upcoming.visibility = View.GONE
+                    shimmerLayoutUpcoming.startShimmer()
+
                 }
             }
         })

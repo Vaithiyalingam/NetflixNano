@@ -9,4 +9,5 @@
     <color name="white">#FFFFFF</color>
     <color name="bnm_color">#FF574D4D</color>
     <color name="red">#FFC81515</color>
+    <color name="shimmer_placeholder_color">#E8E1E1</color>
 </resources>

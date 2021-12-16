@@ -7,11 +7,6 @@
         android:icon="@drawable/ic_baseline_local_movies_24"/>
 
     <item
-        android:id="@+id/tvFragment"
-        android:title="Tv"
-        android:icon="@drawable/ic_baseline_tv_24"/>
-
-    <item
         android:id="@+id/watchlistFragment"
         android:title="Watch List"
         android:icon="@drawable/ic_baseline_watch_later_24"/>
